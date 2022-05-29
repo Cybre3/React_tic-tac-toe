@@ -3,7 +3,8 @@ body {
   margin: 20px;
 }
 
-ol, ul {
+ol,
+ul {
   padding-left: 30px;
 }
 
@@ -17,7 +18,8 @@ ol, ul {
   margin-bottom: 10px;
 }
 
-.square, .square-o {
+.square,
+.square-o {
   background: #fff;
   border: 2px solid #999;
   float: left;
@@ -43,7 +45,6 @@ ol, ul {
   outline: none;
 }
 
-
 .kbd-navigation .square:focus {
   background: #ddd;
 }
@@ -54,5 +55,93 @@ ol, ul {
 }
 
 .game-info {
+  font-size: 30px;
+  font-weight: 600;
   margin-left: 20px;
+}
+
+.game-info ol {
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.game-info li {
+  margin-bottom: 10px;
+}
+
+.game-info li button {
+  font-size: 24px;
+  letter-spacing: 0.1em;
+}
+
+.game-board {
+  margin-right: 25px;
+}
+
+@media only screen and (max-width: 900px) {
+  .square,
+  .square-o {
+    font-size: 100px;
+    height: 24px;
+    padding: 60px 80px 50px 20px;
+    width: 20px;
+  }
+
+  .square-o {
+    padding: 60px 90px 50px 10px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .game {
+    flex-direction: column;
+    height: 525px;
+  }
+
+  .game-board {
+    order: 1;
+    margin: auto auto 0;
+  }
+
+  .game-info {
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    width: 370px;
+  }
+
+  .game-info ol {
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .game-info li {
+    margin-bottom: 10px;
+  }
+
+  .game-info li button {
+    font-size: 14px;
+    letter-spacing: 0.05em;
+  }
+
+  .game-info li:nth-child(odd) {
+    margin-right: 10px;
+  }
+
+  .square,
+  .square-o {
+    align-self: center;
+    font-size: 60px;
+    height: 24px;
+    padding: 40px 60px 45px 20px;
+    width: 20px;
+  }
 }
